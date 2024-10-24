@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import puntos from '/puntos.png'
 
 interface FAQItem {
   question: string;
@@ -38,7 +39,12 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div id="faq" className="bg-background py-12 container-section">
+    <div id="faq" className="bg-background relative pt-12 pb-20  container-section">
+      <img 
+            src={puntos} 
+            alt="Decoracion Fondo" 
+            className='absolute z-0 bottom-0 right-0 h-[300px] lg:h-[600px]'
+          />
       <div className='content-section mx-auto'>
         <p className="text-[28px] z-100 md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-10 text-center">
           Preguntas Frecuentes
@@ -49,40 +55,42 @@ const FAQ: React.FC = () => {
             const isOpen = openIndexes.includes(index);
 
             return (
-              <div key={index} className="rounded-3xl shadow-xl shadow-primary/15  max-w-[1200px] mx-auto"> {/* Añadir sombra a cada tab */}
-                <motion.button
-                  onClick={() => toggleFAQ(index)}
-                  className={`w-full flex justify-between items-center text-lg lg:text-xl font-medium p-5 lg:p-7 rounded-3xl transition-colors text-left ${
-                    isOpen ? 'bg-primary text-white' : 'bg-secondary text-black'
-                  }`}
-                >
-                  {faq.question}
-                  {isOpen ? <FaMinus /> : <FaPlus />}
-                </motion.button>
+              <div key={index} className="rounded-3xl shadow-xl shadow-primary/15 max-w-[1200px] mx-auto"> {/* Añadir sombra a cada tab */}
+  <motion.button
+    onClick={() => toggleFAQ(index)}
+    className={`w-full flex justify-between items-center text-lg lg:text-xl font-medium p-5 lg:p-7 rounded-3xl transition-colors text-left ${
+      isOpen ? 'bg-primary text-white' : 'bg-secondary text-black'
+    }`}
+  >
+    {faq.question}
+    <div className='flex justify-end items-center'>
+      {isOpen ? <FaMinus size={16} /> : <FaPlus size={16} />}
+    </div>
+  </motion.button>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      key={index}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ height: { duration: 0.4 }, opacity: { duration: 0.3 } }}
-                      className="overflow-hidden "
-                    >
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3 }}
-                        className="mt-2 p-4 rounded-3xl bg-primary bg-opacity-10 "
-                      >
-                        {faq.answer}
-                      </motion.div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+  <AnimatePresence initial={false}>
+    {isOpen && (
+      <motion.div
+        key={index}
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: 'auto', opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+        transition={{ height: { duration: 0.4 }, opacity: { duration: 0.3 } }}
+        className="overflow-hidden "
+      >
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+          className="mt-2 p-4 rounded-3xl bg-primary bg-opacity-10 "
+        >
+          {faq.answer}
+        </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
             );
           })}
         </div>

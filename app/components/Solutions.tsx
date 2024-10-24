@@ -19,6 +19,7 @@ function Solutions() {
         alt="Vector 1" 
         className='absolute z-0 top-[33%] right-0 w-24 lg:w-80'
       />
+      
 
       <div id='servicios' className='container-section relative z-10 pt-24 -mt-24'>
         <div className='content-section flex flex-row flex-wrap items-center'>
@@ -78,19 +79,25 @@ function Solutions() {
                 Explora
               </NavLink>
             </div>
-            <p className="text-base leading-[28px] font-normal text-neutral-500 mb-6 mt-2 md:mb-4">
+            <p className="text-base leading-[28px] font-normal text-neutral-500 mb-0 mt-2 md:mb-4">
               Implementamos actualizaciones automáticas para cumplir con cambios laborales 
               y garantizamos seguridad en la nube respaldada por AWS.
             </p>
             
           </div>
-
-          {/* Video */}
-          <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12'>
-          <video className='flex max-h-[400px] w-auto rounded-xl' controls autoPlay loop>
+          
+          <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12 min-h-[330px] lg:min-h-[600px]'>
+   
+          <video className='absolute h-[155px] lg:h-[335px] z-[100] rounded-xl top-[90px] lg:top-[150px] left-[12px] lg:right-[232px]' controls autoPlay loop>
             <source src={video} type="video/mp4" />
             Tu navegador no soporta la reproducción de videos.
           </video>
+          <img 
+            src={videoplaceholder} 
+            alt="Video Placeholder" 
+            className='absolute z-0 top-[35px] lg:right-0 w-full h-[220px] lg:w-[700px] lg:h-[460px]'
+          />
+          
         </div>
 
         </div>

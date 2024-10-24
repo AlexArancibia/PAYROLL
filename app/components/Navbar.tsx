@@ -22,7 +22,7 @@ function Navbar() {
   };
 
   return (
-    <div className="container-section py-2 bg-background fixed top-0 left-0 w-full z-50 shadow-lg shadow-primary/5">
+    <div className="container-section py-4 lg:py-2 bg-background fixed top-0 left-0 w-full z-50 shadow-lg shadow-primary/5">
       <div className="content-section flex justify-between items-center gap-0">
         
         {/* Columna del logo */}

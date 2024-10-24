@@ -85,7 +85,7 @@ function Administracion() {
               <img 
                 src={tabs[activeTab].image} 
                 alt={`Imagen de ${tabs[activeTab].title}`} 
-                className="w-full h-[500px] z-[1991] rounded-lg object-cover mb-8 z-1000" // Ajustar tamaño de la imagen
+                className="w-full h-[270px] lg:h-[500px] z-[1991] rounded-lg object-cover mb-8 z-1000" // Ajustar tamaño de la imagen
               />
             </div>
           </motion.div>
