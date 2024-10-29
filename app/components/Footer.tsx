@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import logo from '/logofooter.png'; // Importa tu logo
+import { NavLink } from '@remix-run/react';
 
 function Footer() {
   return (
@@ -32,16 +33,40 @@ function Footer() {
 
           {/* Tercera División: Servicios */}
           <div className="flex flex-col items-start mb-8 lg:mb-0 w-full lg:w-1/5 gap-4">
-            <h2 className="font-semibold text-lg lg:text-xl text-white">Servicios</h2>
-            <ul className="list-disc list-inside text-md lg:text-base  text-white ">
-              <li>· Proceso de nóminas</li>
-              <li>· Gestión del tiempo del personal</li>
-              <li>· Gestión de datos maestros</li>
-              <li>· Reportes</li>
-              <li>· Administración de sistemas</li>
-              <li>· Self Service Human Resource Online</li>
-            </ul>
-          </div>
+  <h2 className="font-semibold text-lg lg:text-xl text-white">Servicios</h2>
+  <ul className="list-disc list-inside text-md lg:text-base text-white">
+    <li>
+      <NavLink to="#servicios" className="text-white hover:underline">
+        · Proceso de nóminas
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="#servicios" className="text-white hover:underline">
+        · Gestión del tiempo del personal
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="#servicios" className=" text-white hover:underline">
+        · Gestión de datos maestros
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="#servicios" className="text-white hover:underline">
+        · Reportes
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="#servicios" className="text-white hover:underline">
+        · Administración de sistemas
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="#servicios" className="text-white hover:underline">
+        · Self Service Human Resource Online
+      </NavLink>
+    </li>
+  </ul>
+</div>
 
           {/* Cuarta División: Links */}
           <div className="flex flex-col items-start mb-8 lg:mb-0 w-full lg:w-1/5 gap-4">

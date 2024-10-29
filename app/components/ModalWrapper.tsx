@@ -31,7 +31,7 @@ const ModalWrapper: React.FC<ModalWrapperProps> = ({ label, variation = 'default
     <div className='w-full lg:w-fit'>
       {/* Botón para abrir el modal */}
       <button
-        className={`w-full lg:w-fit shadow-md transition-all duration-500 ease-in-out px-5 py-3 rounded-xl font-normal 
+        className={`w-full lg:w-fit shadow-md shadow-black/30 transition-all duration-500 ease-in-out px-5 py-3 rounded-xl font-semibold 
           ${variation === 'blue' ? 'bg-primary text-white hover:bg-blue-700' : 'bg-background text-primary hover:text-white hover:bg-primary hover:shadow-primary/30'}`}
         onClick={openModal}
       >

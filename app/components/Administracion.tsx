@@ -39,7 +39,7 @@ function Administracion() {
   ];
 
   return (
-    <div className="container-section py-16 bg-background relative ">
+    <div id="soluciones" className="container-section py-16 bg-background relative ">
       <div className="content-section flex flex-col relative">
         <div className='pt-8 pb-16 lg:pb-24 text-center'>
       <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">

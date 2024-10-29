@@ -14,11 +14,11 @@ import vector2 from '/vector2.png';
 function WhyUs() {
   return (
  
-      <div id='nosotros' className='relative container-section bg-background pt-8'>
+      <div  className='relative container-section bg-background pt-8'>
         <img src={vector2} alt="Vector 2" className="absolute z-0 top-0 left-0 w-16 lg:w-64" />
         {/* Otras secciones previas */}
         <div className='content-section flex flex-row flex-wrap items-center'>
-        <div className=" w-full py-4 lg:py-16">
+        <div className=" w-full py-4 lg:pb-16">
           {/* Imagen vectorial en absolute */}
           
 

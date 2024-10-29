@@ -12,8 +12,8 @@ import WhyUs from "~/components/WhyUs";
  
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Payroll Plus" },
+    { name: "description", content: "Nómina para todos los regímenes laborales" },
   ];
 };
 

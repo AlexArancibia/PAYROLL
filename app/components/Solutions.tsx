@@ -21,16 +21,16 @@ function Solutions() {
       />
       
 
-      <div id='servicios' className='container-section relative z-10 pt-24 -mt-24'>
+      <div  className='container-section relative z-10 pt-24 -mt-24'>
         <div className='content-section flex flex-row flex-wrap items-center'>
 
           {/* Sección de texto y grid */}
-          <div className='flex w-full lg:w-5/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
-            <p className="text-[14px] md:text-[16px] font-bold leading-[24px] text-neutral-500">
-              Solución de extremo a extremo.
+          <div className='flex w-full lg:w-6/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
+            <p className="text-[18px] md:text-[20px]  font-bold leading-[24px] text-neutral-500">
+              Solución de extremo a extremo
             </p>
             <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
-              Una solución de nómina<br /> todo en uno <br /> con funciones y procesos <br /> integrados.
+              Una solución de nómina<br /> todo en uno  con funciones <br />y procesos  integrados.
             </p>
             <p className="text-base leading-[28px] font-normal text-neutral-500 mb-6 md:mb-4">
               Acceda a una nómina eficiente y precisa con flujos de trabajo optimizados. 
@@ -38,12 +38,12 @@ function Solutions() {
             </p>
             <div className='flex justify-center md:justify-start  mb-4 lg:mb-0   '>
                
-              <ModalWrapper label='Mas información' />
+              <ModalWrapper label='Más información' />
             </div>
           </div>
 
           {/* Grid con íconos e información */}
-          <div className='relative flex w-full lg:w-7/12 justify-center items-center overflow-hidden pl-0 lg:pl-10'>
+          <div className='relative flex w-full lg:w-6/12 justify-center items-center overflow-hidden pl-0 lg:pl-10'>
             <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10 w-full p-0'>
               {[
                 { src: icono1, label: "Proceso de nóminas" },
@@ -65,16 +65,16 @@ function Solutions() {
         {/* Segunda Sección con Imagen */}
         <div id='software' className='content-section flex flex-row flex-wrap items-center pt-16 lg:pt-36'>
           <div className='flex w-full lg:w-5/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
-            <p className="text-[14px] md:text-[16px] font-bold leading-[24px] text-neutral-500">
-              Recursos humanos diarios.
+            <p className="text-[18px] md:text-[20px] font-bold leading-[24px] text-neutral-500">
+              Recursos humanos diarios
             </p>
             <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
-              Un portal para empleados con una interfaz <br /> moderna y fácil de usar.
+              Un portal para empleados  <br /> con una interfaz moderna  <br /> y fácil de usar.
             </p>
             <div className='flex justify-center md:justify-start'>
               <NavLink
-                to="/"
-                className="bg-background text-primary shadow-md my-3 shadow-primary/30 px-6 py-3 rounded-xl font-normal hover:text-white hover:bg-primary hover:shadow-primary/30 transition-all duration-500 ease-in-out flex justify-center items-center w-full md:w-fit"
+                to="https://www.human.com.pe/"
+                className="bg-background text-primary shadow-md my-3 shadow-black/30 px-6 py-3 rounded-xl font-bold hover:text-white hover:bg-primary hover:shadow-primary/30 transition-all duration-500 ease-in-out flex justify-center items-center w-full md:w-fit"
               >
                 Explora
               </NavLink>
@@ -88,15 +88,17 @@ function Solutions() {
           
           <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12 min-h-[330px] lg:min-h-[600px]'>
    
-          <video className='absolute h-[155px] lg:h-[335px] z-[100] rounded-xl top-[90px] lg:top-[150px] left-[12px] lg:right-[232px]' controls autoPlay loop>
+          <video className=' absolute h-[175px] lg:h-[320px] xl:h-[346px] z-[100] rounded-sm  lg:rounded-xl top-[25px]   lg:top-[116px] xl:top-[120px]   ' controls autoPlay loop>
             <source src={video} type="video/mp4" />
             Tu navegador no soporta la reproducción de videos.
           </video>
+   
           <img 
             src={videoplaceholder} 
             alt="Video Placeholder" 
-            className='absolute z-0 top-[35px] lg:right-0 w-full h-[220px] lg:w-[700px] lg:h-[460px]'
+            className='absolute z-0 top-[00px] lg:top-[70px] w-[300px] h-[220px] lg:w-[550px] lg:h-[400px] xl:w-[600px] xl:h-[440px]'
           />
+          <div id="nosotros" className='absolute top-[70%] lg:top-[80%]'></div>
           
         </div>
 

@@ -1,7 +1,8 @@
 import { NavLink } from "@remix-run/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion"; // Importar framer-motion
 import logo from "/logo.png";
-import logo2 from "/logo.png";
+import logo2 from "/logo2.png";
 import HamburguerMenu from "./HamburguerMenu";
 
 // Configuración de los elementos de navegación.
@@ -16,6 +17,14 @@ const navItems = [
 function Navbar() {
   // Estado para controlar el ítem activo del navbar
   const [active, setActive] = useState<number | null>(null);
+  const [showLogo1, setShowLogo1] = useState(true); // Estado para alternar logos
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowLogo1(prev => !prev); // Alternar entre logos cada 4 segundos
+    }, 4000);
+    return () => clearInterval(interval); // Limpiar el intervalo al desmontar
+  }, []);
 
   const handleClick = (index: number) => {
     setActive(index); // Actualiza el ítem activo con su índice
@@ -26,15 +35,26 @@ function Navbar() {
       <div className="content-section flex justify-between items-center gap-0">
         
         {/* Columna del logo */}
-        <div className="flex items-center justify-start w-2/3 lg:w-1/4">
-          {/* Logo para pantallas grandes (lg en adelante) */}
-          <NavLink to="/" className="hidden lg:block">
-            <img src={logo} alt="Logo Villacer" className="w-[170px] h-auto" />
+        <div className="flex items-center justify-start w-2/3 lg:w-1/4 relative">
+          <NavLink to="/" className="absolute">
+            <motion.img
+              src={logo}
+              alt="Logo"
+              className="w-[170px] h-auto"
+              initial={{ opacity: 1 }} // Logo inicial visible
+              animate={{ opacity: showLogo1 ? 1 : 0 }} // Desvanece o muestra según el estado
+              transition={{ duration: 1 }} // Duración de la transición
+            />
           </NavLink>
-          
-          {/* Logo como NavLink para pantallas pequeñas (menores a lg) */}
-          <NavLink to="/" className="block lg:hidden">
-            <img src={logo2} alt="Logo Villacer 2" className="w-[150px] h-auto" />
+          <NavLink to="/" className="absolute">
+            <motion.img
+              src={logo2}
+              alt="Logo Alternativo"
+              className="w-[170px] h-auto"
+              initial={{ opacity: 0 }} // Logo alternativo oculto al inicio
+              animate={{ opacity: showLogo1 ? 0 : 1 }} // Desvanece o muestra según el estado
+              transition={{ duration: 1 }} // Duración de la transición
+            />
           </NavLink>
         </div>
 
@@ -45,11 +65,11 @@ function Navbar() {
               <li key={index} className="list-none">
                 <NavLink
                   to={item.href}
-                  className={`flex items-center justify-center px-6 pb-3 pt-3 w-[150px] box-border transition-all duration-500 border-b-2 ${
-  active === index
-    ? "bg-primary text-white"  // Fondo primario si está activo
-    : "text-primary border-transparent hover:border-primary"  // Borde inferior en hover
-}`}
+                  className={`flex items-center justify-center px-3 py-2 w-[150px] box-border transition-all duration-500 border-b-2 ${
+                    active === index
+                      ? "bg-primary text-white rounded-xl"  // Fondo primario si está activo
+                      : "text-primary border-transparent hover:border-primary"  // Borde inferior en hover
+                  }`}
                   onClick={() => handleClick(index)}  // Actualiza el estado al hacer clic
                 >
                   <span>{item.label}</span>
@@ -62,7 +82,7 @@ function Navbar() {
         {/* Columna del botón de contacto */}
         <div className="w-2/3 lg:w-1/4 lg:flex justify-end items-center hidden">
           <NavLink
-            to="/#contactanos"
+            to="https://wa.me/+51987654321"
             className="bg-primary text-white px-5 py-2 rounded-xl font-normal hover:text-white transition-all duration-500 ease-in-out flex items-center"
           >
             Contáctanos
