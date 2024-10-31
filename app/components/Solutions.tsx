@@ -30,7 +30,7 @@ function Solutions() {
               Solución de extremo a extremo
             </p>
             <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
-              Una solución de nómina<br /> todo en uno  con funciones <br />y procesos  integrados.
+              Una solución de nómina<br /> todo en uno  con funciones <br />y procesos  integrados
             </p>
             <p className="text-base leading-[28px] font-normal text-neutral-500 mb-6 md:mb-4">
               Acceda a una nómina eficiente y precisa con flujos de trabajo optimizados. 
@@ -53,7 +53,7 @@ function Solutions() {
                 { src: icono5, label: "Administración de sistemas" },
                 { src: icono6, label: "Self Service Human Resource on Line" }
               ].map(({ src, label }) => (
-                <div className='bg-primary hover:bg-sky-950 transition-colors   rounded-xl shadow-lg shadow-primary/50 py-8 px-4 flex flex-col  justify-center items-center h-44'>
+                <div key={label} className='bg-primary hover:bg-sky-950 transition-colors   rounded-xl shadow-lg shadow-primary/50 py-8 px-4 flex flex-col  justify-center items-center h-44'>
                   <img src={src} alt={label} className='h-12 w-12 mb-2' />
                   <p className='text-white text-center'>{label}</p>
                 </div>
@@ -63,13 +63,13 @@ function Solutions() {
         </div>
 
         {/* Segunda Sección con Imagen */}
-        <div id='software' className='content-section flex flex-row flex-wrap items-center pt-16 lg:pt-36'>
+        <div id='software' className='content-section flex flex-row flex-wrap items-center pt-16 lg:pt-20'>
           <div className='flex w-full lg:w-5/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
             <p className="text-[18px] md:text-[20px] font-bold leading-[24px] text-neutral-500">
               Recursos humanos diarios
             </p>
             <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
-              Un portal para empleados  <br /> con una interfaz moderna  <br /> y fácil de usar.
+              Un portal para empleados  <br /> con una interfaz moderna  <br /> y fácil de usar
             </p>
             <div className='flex justify-center md:justify-start'>
               <NavLink
@@ -88,10 +88,17 @@ function Solutions() {
           
           <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12 min-h-[330px] lg:min-h-[600px]'>
    
-          <video className=' absolute h-[175px] lg:h-[320px] xl:h-[346px] z-[100] rounded-sm  lg:rounded-xl top-[25px]   lg:top-[116px] xl:top-[120px]   ' controls autoPlay loop>
+          <video 
+            className='absolute h-[175px] lg:h-[320px] xl:h-[346px] z-[100] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
+            controls 
+            autoPlay 
+            loop 
+            muted
+          >
             <source src={video} type="video/mp4" />
             Tu navegador no soporta la reproducción de videos.
           </video>
+
    
           <img 
             src={videoplaceholder} 

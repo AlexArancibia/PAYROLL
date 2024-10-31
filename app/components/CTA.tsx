@@ -22,7 +22,7 @@ function CTA() {
       <div className="w-1/5 lg:w-[60%]"></div>
       
       {/* Sección con el contenido desde el 60% */}
-      <div className="w-[480px] md:w-[500px] lg:w-[600px] max-h-[300px] bg-white/50 backdrop-blur-lg rounded-l-3xl py-8 lg:py-12 px-4 md:px-8 flex flex-col justify-center items-end mt-auto mb-12 lg:my-auto">
+      <div className="w-[480px] md:w-[500px] lg:w-[550px] max-h-[300px] bg-white/50 backdrop-blur-lg rounded-l-3xl py-8 lg:py-8 px-4 md:px-4 flex flex-col justify-center items-end mt-auto mb-12 lg:my-auto">
         {/* Primer texto */}
         <p className="hidden lg:block text-2xl lg:text-4xl font-medium text-neutral-800 mb-2 text-right">
           Contamos con la confianza de<br/>las principales 

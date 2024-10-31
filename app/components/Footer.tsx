@@ -33,7 +33,9 @@ function Footer() {
 
           {/* Tercera División: Servicios */}
           <div className="flex flex-col items-start mb-8 lg:mb-0 w-full lg:w-1/5 gap-4">
-  <h2 className="font-semibold text-lg lg:text-xl text-white">Servicios</h2>
+  <NavLink to="#servicios" className="text-white hover:underline">
+    <h2 className="font-semibold text-lg lg:text-xl text-white">Servicios</h2>
+    </NavLink>
   <ul className="list-disc list-inside text-md lg:text-base text-white">
     <li>
       <NavLink to="#servicios" className="text-white hover:underline">
