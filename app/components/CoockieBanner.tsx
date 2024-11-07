@@ -55,7 +55,7 @@ const CookieModal: React.FC = () => {
   return (
     <div
       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-      onClick={handleClose}
+    
     >
       <div
         className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full relative overflow-hidden"

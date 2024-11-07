@@ -89,8 +89,8 @@ function Solutions() {
           <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12 min-h-[250px] lg:min-h-[600px]'>
    
           <video 
-            className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[346px] z-[100] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
-            controls 
+            className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[346px] z-[1] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
+            controls
             autoPlay 
             loop 
             muted
@@ -100,7 +100,7 @@ function Solutions() {
           </video>
           <video 
             className='rounded-xl block lg:hidden ' 
-            controls 
+      
             autoPlay 
             loop 
             muted
