@@ -65,7 +65,7 @@ function Administracion() {
         </div>
 
         {/* Columna de contenido */}
-        <div className="lg:w-2/3 w-full flex flex-col relative">
+        <div className="lg:w-2/3 w-full flex flex-col relative z-[2]">
           <motion.div
             key={activeTab}
             initial={{ opacity: 0 }}

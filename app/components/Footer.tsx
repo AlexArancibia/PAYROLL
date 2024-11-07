@@ -10,7 +10,9 @@ function Footer() {
         <div className="content-section flex flex-col lg:flex-row justify-between items-start">
           {/* Primera División: Logo y Redes Sociales */}
           <div className="flex flex-col items-start mb-4 lg:mb-0 w-full lg:w-1/5">
+          <NavLink to="/">
             <img src={logo} alt="Logo" className="mb-4" /> {/* Ajusta la altura del logo según sea necesario */}
+            </NavLink>
             <div className="flex space-x-4 mt-2 mb-8">
               <a href="#" className="text-white hover:text-gray-300 transition duration-300">
                 <FaFacebook size={18} />
@@ -94,7 +96,7 @@ function Footer() {
       {/* Botón flotante de WhatsApp */}
       <a 
         href="https://wa.me/123456789" // Reemplaza con tu número de WhatsApp
-        className="fixed bottom-6 right-6 z-[9999] bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300"
+        className="fixed bottom-6 right-6 z-[999] bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300"
         target="_blank"
         rel="noopener noreferrer"
       >

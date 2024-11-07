@@ -43,7 +43,7 @@ function Solutions() {
           </div>
 
           {/* Grid con íconos e información */}
-          <div className='relative flex w-full lg:w-6/12 justify-center items-center overflow-hidden pl-0 lg:pl-10'>
+          <div  className='relative flex w-full lg:w-6/12 justify-center items-center overflow-hidden pl-0 lg:pl-10'>
             <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10 w-full p-0'>
               {[
                 { src: icono1, label: "Proceso de nóminas" },
@@ -59,11 +59,14 @@ function Solutions() {
                 </div>
               ))}
             </div>
+            
           </div>
+          <div id='software' className='absolute bottom-[850px] lg:bottom-[670px]'></div>
         </div>
+        
 
         {/* Segunda Sección con Imagen */}
-        <div id='software' className='content-section flex flex-row flex-wrap items-center pt-16 lg:pt-20'>
+        <div className='content-section flex flex-row flex-wrap items-center pt-16 lg:pt-20'>
           <div className='flex w-full lg:w-5/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
             <p className="text-[18px] md:text-[20px] font-bold leading-[24px] text-neutral-500">
               Recursos humanos diarios
@@ -90,7 +93,7 @@ function Solutions() {
    
           <video 
             className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[346px] z-[1] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
-            controls
+             
             autoPlay 
             loop 
             muted

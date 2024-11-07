@@ -64,7 +64,7 @@ const CookieModal: React.FC = () => {
         {/* Close button (X) */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+          className="absolute text-4xl top-4 right-4 text-gray-600 hover:text-gray-900"
         >
           &times;
         </button>
@@ -85,29 +85,24 @@ const CookieModal: React.FC = () => {
               alt="Logo"
               className="mr-4 w-10 h-10"
             />
-            <p className="text-2xl font-bold">This website uses cookies</p>
+            <p className="text-2xl font-bold">Este sitio web utiliza cookies</p>
           </div>
           <p className="mb-6 text-gray-700">
-            We use cookies to improve your browsing experience, analyze site usage, and personalize content. You can accept all cookies or set your preferences.
+          Utilizamos cookies propias y de terceros para mejorar tu experiencia de navegación, analizar el uso del sitio y personalizar el contenido. Puedes aceptar todas las cookies o configurar tus preferencias.
           </p>
           <div className="flex justify-center gap-4">
             <button
               onClick={handlePolicy}
               className="px-4 py-2 border border-primary text-primary font-semibold rounded-md hover:bg-blue-100"
             >
-              Cookie Policy
+              Rechazar
             </button>
-            <button
-              onClick={handleConfigureCookies}
-              className="px-4 py-2 border border-primary text-primary font-semibold rounded-md hover:bg-blue-100"
-            >
-              Configure Cookies
-            </button>
+             
             <button
               onClick={handleAcceptCookies}
               className="px-4 py-2 bg-primary text-white font-semibold rounded-md hover:bg-blue-700"
             >
-              Accept All Cookies
+              Aceptar todas las cookies
             </button>
           </div>
         </div>
