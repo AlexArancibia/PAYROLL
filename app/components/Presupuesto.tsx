@@ -8,7 +8,7 @@ function Presupuesto() {
       <div className='content-section flex flex-row flex-wrap items-center'>
           <div className='flex w-full lg:w-6/12 flex-col gap-4  justify-center'>
  
-            <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
+            <p className="text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
             Solicitar tu presupuesto online
             </p>
             <p className="text-base leading-[28px] font-normal text-neutral-500 mb-6 md:mb-4">

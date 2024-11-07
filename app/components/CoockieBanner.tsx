@@ -6,30 +6,46 @@ const CookieModal: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
-    const cookieConsent = localStorage.getItem("cookieConsent");
-    if (!cookieConsent) {
-      setIsVisible(true);
+    // Check if running in the browser
+    if (typeof window !== 'undefined') {
+      const cookieConsent = localStorage.getItem("cookieConsent");
+      if (!cookieConsent) {
+        setIsVisible(true);
+        document.body.style.overflowY = 'hidden'; // Lock scroll
+      }
     }
   }, []);
 
   const handleAcceptCookies = (): void => {
-    localStorage.setItem("cookieConsent", "accepted");
-    setIsVisible(false);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("cookieConsent", "accepted");
+      setIsVisible(false);
+      document.body.style.overflowY = 'auto'; // Unlock scroll
+    }
   };
 
   const handleConfigureCookies = (): void => {
     setIsVisible(false);
+    if (typeof window !== 'undefined') {
+      document.body.style.overflowY = 'auto'; // Unlock scroll
+    }
   };
 
   const handlePolicy = (): void => {
     setIsVisible(false);
+    if (typeof window !== 'undefined') {
+      document.body.style.overflowY = 'auto'; // Unlock scroll
+    }
   };
 
   const handleClose = (): void => {
     setIsVisible(false);
+    if (typeof window !== 'undefined') {
+      document.body.style.overflowY = 'auto'; // Unlock scroll
+    }
   };
 
-  // Evitar que el modal se cierre al hacer clic dentro de él
+  // Prevent the modal from closing when clicking inside it
   const handleModalClick = (event: React.MouseEvent<HTMLDivElement>): void => {
     event.stopPropagation();
   };
@@ -45,15 +61,15 @@ const CookieModal: React.FC = () => {
         className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full relative overflow-hidden"
         onClick={handleModalClick}
       >
-        {/* Botón de cierre (X) */}
+        {/* Close button (X) */}
         <button
           onClick={handleClose}
           className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
         >
-          &times; {/* Icono de cierre */}
+          &times;
         </button>
 
-        {/* Vector en el fondo */}
+        {/* Background vector */}
         <img
           src={vector1}
           alt="Vector"
@@ -61,39 +77,37 @@ const CookieModal: React.FC = () => {
           style={{ mixBlendMode: 'multiply' }}
         />
         
-        {/* Contenido principal */}
+        {/* Main content */}
         <div className="relative z-10">
           <div className="flex items-center mb-4">
             <img
               src={logo3}
-              alt="Isotipo"
+              alt="Logo"
               className="mr-4 w-10 h-10"
             />
-            <p className="text-2xl font-bold">Este sitio web utiliza cookies</p>
+            <p className="text-2xl font-bold">This website uses cookies</p>
           </div>
           <p className="mb-6 text-gray-700">
-            Utilizamos cookies propias y de terceros para mejorar tu experiencia
-            de navegación, analizar el uso del sitio y personalizar el contenido.
-            Puedes aceptar todas las cookies o configurar tus preferencias.
+            We use cookies to improve your browsing experience, analyze site usage, and personalize content. You can accept all cookies or set your preferences.
           </p>
           <div className="flex justify-center gap-4">
             <button
               onClick={handlePolicy}
               className="px-4 py-2 border border-primary text-primary font-semibold rounded-md hover:bg-blue-100"
             >
-              Política de Cookies
+              Cookie Policy
             </button>
             <button
               onClick={handleConfigureCookies}
               className="px-4 py-2 border border-primary text-primary font-semibold rounded-md hover:bg-blue-100"
             >
-              Configurar Cookies
+              Configure Cookies
             </button>
             <button
               onClick={handleAcceptCookies}
               className="px-4 py-2 bg-primary text-white font-semibold rounded-md hover:bg-blue-700"
             >
-              Aceptar todas las Cookies
+              Accept All Cookies
             </button>
           </div>
         </div>

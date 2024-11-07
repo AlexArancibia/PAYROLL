@@ -104,9 +104,9 @@ const FormComponent: React.FC<FormComponentProps> = ({ onClose }) => {
 
               <div>
                 <label className="text-sm font-semibold">Escoge la frecuencia con que realizarás tus pagos</label>
-                <div className="flex gap-1 lg:gap-4 justify-between mt-2">
+                <div className="flex  flex-col lg:flex-row  gap-1 lg:gap-4 justify-between mt-2">
                   {['semanal', 'quincenal', 'mensual'].map((option) => (
-                    <label key={option} className="flex items-center cursor-pointer w-full">
+                    <label key={option} className="flexitems-center cursor-pointer w-full">
                       <input
                         type="checkbox"
                         value={option}
@@ -114,15 +114,19 @@ const FormComponent: React.FC<FormComponentProps> = ({ onClose }) => {
                         onChange={handleFrequencyChange}
                         className="hidden"
                       />
-                      <div className={`flex flex-col  items-center w-full p-2 border-2 border-primary rounded-xl   transition-all duration-300 ${frequency.includes(option) ? 'bg-primary text-white scale-105 shadow-lg' : 'bg-background'}`}>
+                      <div className={`flex flex-col  items-center w-full p-2 border-2 border-primary rounded-xl   transition-all duration-300 ${frequency.includes(option) ? 'bg-primary text-white   shadow-lg' : 'bg-background'}`}>
   {frequency.includes(option) ? (
-    <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500 my-2">
+    <><div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500 my-2">
       <FaCheck className="text-primary transition-transform duration-300" size={12} />
     </div>
-  ) : (
+    <span className="text-base text-white font-semibold ">{`Pago ${option}`}</span>
+    </>
+    ) : (
+      <>
     <img src={paid} alt={`Pago ${option}`} className="my-[6px] transition-transform duration-300" />
-  )}
-  <span className="text-sm">{`Pago ${option}`}</span>
+    <span className="text-base text-primary font-semibold ">{`Pago ${option}`}</span>
+    </> )}
+  
 </div>
 
                     </label>

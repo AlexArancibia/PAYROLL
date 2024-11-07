@@ -17,7 +17,7 @@ function HeroSection() {
             </p>
 
             {/* Segundo texto (color primario) con interlineado mejorado */}
-            <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
+            <p className="text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
               Una nueva era de eficiencia, <br /> cumplimiento e innovación
             </p>
 
@@ -30,7 +30,7 @@ function HeroSection() {
             {/* Botón sin borde, solo sombra */}
             <div  className='flex justify-center md:justify-start    '>
                
-              <ModalWrapper label='Reserve un demostración' />
+              <ModalWrapper label='Reserve una demostración' />
             </div>
           </div>
 

@@ -22,7 +22,7 @@ function WhyUs() {
           {/* Imagen vectorial en absolute */}
           
 
-          <p className="text-[28px] z-100 md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-12 text-center">
+          <p className="text-[33px] z-100 md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-12 text-center">
             ¿Por qué trabajar con nosotros?
           </p>
 

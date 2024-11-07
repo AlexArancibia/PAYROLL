@@ -21,7 +21,7 @@ function Solutions() {
       />
       
 
-      <div  className='container-section relative z-10 pt-24 -mt-24'>
+      <div  className='container-section relative  pt-24 -mt-24'>
         <div className='content-section flex flex-row flex-wrap items-center'>
 
           {/* Sección de texto y grid */}
@@ -29,7 +29,7 @@ function Solutions() {
             <p className="text-[18px] md:text-[20px]  font-bold leading-[24px] text-neutral-500">
               Solución de extremo a extremo
             </p>
-            <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
+            <p className="text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
               Una solución de nómina<br /> todo en uno  con funciones <br />y procesos  integrados
             </p>
             <p className="text-base leading-[28px] font-normal text-neutral-500 mb-6 md:mb-4">
@@ -68,12 +68,12 @@ function Solutions() {
             <p className="text-[18px] md:text-[20px] font-bold leading-[24px] text-neutral-500">
               Recursos humanos diarios
             </p>
-            <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
+            <p className="text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
               Un portal para empleados  <br /> con una interfaz moderna  <br /> y fácil de usar
             </p>
             <div className='flex justify-center md:justify-start'>
               <NavLink
-                to="https://www.human.com.pe/"
+                to="https://human.com.pe/inicio"
                 className="bg-background text-primary shadow-md my-3 shadow-black/30 px-6 py-3 rounded-xl font-bold hover:text-white hover:bg-primary hover:shadow-primary/30 transition-all duration-500 ease-in-out flex justify-center items-center w-full md:w-fit"
               >
                 Explora
@@ -86,10 +86,10 @@ function Solutions() {
             
           </div>
           
-          <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12 min-h-[330px] lg:min-h-[600px]'>
+          <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12 min-h-[250px] lg:min-h-[600px]'>
    
           <video 
-            className='absolute h-[175px] lg:h-[320px] xl:h-[346px] z-[100] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
+            className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[346px] z-[100] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
             controls 
             autoPlay 
             loop 
@@ -98,13 +98,23 @@ function Solutions() {
             <source src={video} type="video/mp4" />
             Tu navegador no soporta la reproducción de videos.
           </video>
-
-   
+          <video 
+            className='rounded-xl block lg:hidden ' 
+            controls 
+            autoPlay 
+            loop 
+            muted
+          >
+            <source src={video} type="video/mp4" />
+            Tu navegador no soporta la reproducción de videos.
+          </video>
+ 
           <img 
             src={videoplaceholder} 
             alt="Video Placeholder" 
-            className='absolute z-0 top-[00px] lg:top-[70px] w-[300px] h-[220px] lg:w-[550px] lg:h-[400px] xl:w-[600px] xl:h-[440px]'
+            className='absolute hidden lg:block   z-0 top-[00px] lg:top-[70px] w-[347px] h-[220px] lg:w-[550px] lg:h-[400px] xl:w-[600px] xl:h-[440px]'
           />
+          
           <div id="nosotros" className='absolute top-[70%] lg:top-[80%]'></div>
           
         </div>

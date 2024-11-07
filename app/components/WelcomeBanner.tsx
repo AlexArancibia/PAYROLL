@@ -49,7 +49,7 @@ const WelcomeBanner: React.FC = () => {
             &times; {/* Icono de cierre */}
           </button>
 
-          <img src={logo} alt="Logo" className="mb-6 w-32" /> {/* Ajusta el tamaño del logo según sea necesario */}
+          <img src={logo} alt="Logo" className="mb-6 w-[400px]" /> {/* Ajusta el tamaño del logo según sea necesario */}
           <p className="text-2xl font-bold text-center mb-4">
             Simplifica tu vida y ahorra tiempo.
           </p>

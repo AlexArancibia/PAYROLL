@@ -7,7 +7,7 @@
       <div className='container-section bg-background'>
       <div className="content-section gap-4  py-16 lg:py-24 flex flex-col items-center justify-center text-center">
         {/* Título */}
-        <p className="text-[28px] md:text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
+        <p className="text-[33px] lg:text-[38px] xl:text-[44px] font-normal leading-[36px] md:leading-[54px] lg:leading-[64px] text-primary mb-1">
           ¿Listo para empezar?
         </p>
         
