@@ -33,7 +33,7 @@ function Navbar() {
     <div className="container-section py-4 lg:py-2 bg-background fixed top-0 left-0 w-full z-20 shadow-lg shadow-primary/5">
       <div className="content-section flex justify-between items-center gap-0">
         
-        <div className="flex items-center overflow-hidden justify-start w-2/3 lg:w-1/4 relative">
+        <div className="flex   items-center  overflow-y-hidden justify-start w-[400px] lg:w-1/4 relative">
         <NavLink to="/" className="">
   <img src={base} alt="Logo Base" className="w-[170px] h-auto" />
 
