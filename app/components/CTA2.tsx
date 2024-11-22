@@ -19,6 +19,7 @@
         {/* Botón con ícono de WhatsApp */}
   
         <ModalWrapper label="Reserve una demostración" variation="blue" />
+        <div id='preguntas-frecuentes'></div>
       </div>
       </div>
     );

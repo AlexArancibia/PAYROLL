@@ -102,7 +102,7 @@ function Solutions() {
             Tu navegador no soporta la reproducción de videos.
           </video>
           <video 
-            className='rounded-xl block lg:hidden ' 
+            className='rounded-xl block lg:hidden h-full  ' 
       
             autoPlay 
             loop 

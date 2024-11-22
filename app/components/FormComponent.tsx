@@ -2,6 +2,7 @@ import React, { useState, ChangeEvent } from 'react';
 import { FaCheck } from 'react-icons/fa'; // Importamos el ícono de check
 import rayo from '/rayo.png';
 import paid from '/paid.png'; 
+import emailjs from '@emailjs/browser'; // Importamos EmailJS
 
 interface FormComponentProps {
   onClose: () => void; // Callback para cerrar el modal
@@ -23,18 +24,34 @@ const FormComponent: React.FC<FormComponentProps> = ({ onClose }) => {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log({
+
+    // Configuración de EmailJS
+    const serviceId = 'service_3674kt4'; // Tu Service ID
+    const templateId = 'template_9o5750m'; // Tu Template ID
+    const userId = '6YlUD-lV9jLuoM3VV'; // Tu User ID de EmailJS
+
+    const emailData = {
       companyName,
       email,
       ruc,
-      workerCount,
-      frequency,
+      workerCount: workerCount.toString(),
+      frequency: frequency.join(', '), // Convertimos el array a string
       message,
-      termsAccepted,
-    });
-    onClose(); // Cerrar el modal después de enviar el formulario
+    };
+
+    emailjs
+      .send(serviceId, templateId, emailData, userId)
+      .then(() => {
+        console.log('Correo enviado con éxito');
+        alert('Formulario enviado correctamente');
+        onClose(); // Cerrar el modal después de enviar
+      })
+      .catch((error) => {
+        console.error('Error al enviar el correo:', error);
+        alert('Hubo un problema al enviar el formulario. Inténtalo de nuevo.');
+      });
   };
 
   return (

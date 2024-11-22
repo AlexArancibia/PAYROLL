@@ -28,7 +28,7 @@ const ModalWrapper: React.FC<ModalWrapperProps> = ({ label, variation = 'default
   };
 
   return (
-    <div className='w-full lg:w-fit'>
+    <div  className='w-full lg:w-fit'>
       {/* Botón para abrir el modal */}
       <button
         className={`w-full lg:w-fit shadow-md shadow-black/30 transition-all duration-500 ease-in-out px-5 py-3 rounded-xl font-semibold text-[17px]

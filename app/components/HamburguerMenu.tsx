@@ -74,11 +74,11 @@ function HamburguerMenu({ navItems }: HamburgerMenuProps) {
                 {/* Enlace a WhatsApp */}
                 <li>
                   <a
-                    href="https://wa.me/1234567890" // Reemplaza con tu número de WhatsApp
+                    href="https://wa.me/51994037392" // Reemplaza con tu número de WhatsApp
                     className="flex items-center justify-center text-zinc-100 text-xl border border-zinc-100 rounded-xl px-6 py-4 transition-colors hover:bg-secondary/10"
                   >
                     <FaWhatsapp className="mr-2" /> {/* Icono de WhatsApp */}
-                    987654321
+                    994037392
                   </a>
                 </li>
               </ul>
