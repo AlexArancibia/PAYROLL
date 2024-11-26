@@ -91,7 +91,7 @@ function Solutions() {
           
           <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12 min-h-[250px] lg:min-h-[600px]'>
    
-          <video 
+          {/* <video 
             className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[346px] z-[1] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
              
             autoPlay 
@@ -110,13 +110,34 @@ function Solutions() {
           >
             <source src={video} type="video/mp4" />
             Tu navegador no soporta la reproducción de videos.
-          </video>
+          </video> */}
  
-          <img 
+          {/* <img 
             src={videoplaceholder} 
             alt="Video Placeholder" 
             className='absolute hidden lg:block   z-0 top-[00px] lg:top-[70px] w-[347px] h-[220px] lg:w-[550px] lg:h-[400px] xl:w-[600px] xl:h-[440px]'
-          />
+          /> */}
+
+          <video 
+            className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[446px] z-[1] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[70px]' 
+             
+            autoPlay 
+            loop 
+            muted
+          >
+            <source src={video} type="video/mp4" />
+            Tu navegador no soporta la reproducción de videos.
+          </video>
+          <video 
+            className='rounded-xl block lg:hidden h-full  ' 
+      
+            autoPlay 
+            loop 
+            muted
+          >
+            <source src={video} type="video/mp4" />
+            Tu navegador no soporta la reproducción de videos.
+          </video>
           
           <div id="nosotros" className='absolute top-[70%] lg:top-[80%]'></div>
           
