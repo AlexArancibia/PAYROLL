@@ -20,7 +20,7 @@ function Footer() {
               <a href="#" className="text-white hover:text-gray-300 transition duration-300">
                 <FaLinkedin size={18} />
               </a>
-              <a href="#" className="text-white hover:text-gray-300 transition duration-300">
+              <a href="https://wa.me/51994037392" className="text-white hover:text-gray-300 transition duration-300">
                 <FaWhatsapp size={18} />
               </a>
             </div>
@@ -95,7 +95,7 @@ function Footer() {
 
       {/* Botón flotante de WhatsApp */}
       <a 
-        href="https://wa.me/123456789" // Reemplaza con tu número de WhatsApp
+        href="https://wa.me/51994037392" // Reemplaza con tu número de WhatsApp
         className="fixed bottom-6 right-6 z-[999] bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300"
         target="_blank"
         rel="noopener noreferrer"
