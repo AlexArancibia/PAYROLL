@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import logo from '/logofooter.png'; // Importa tu logo
 import { NavLink } from '@remix-run/react';
 
@@ -23,6 +23,9 @@ function Footer() {
               <a href="https://wa.me/51994037392" className="text-white hover:text-gray-300 transition duration-300">
                 <FaWhatsapp size={18} />
               </a>
+              <a href="mailto:plataforma@payrollplus.com.pe" className="text-white hover:text-gray-300 transition duration-300">
+          <FaEnvelope size={18} />
+        </a>
             </div>
           </div>
 

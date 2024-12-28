@@ -33,7 +33,7 @@ const WelcomeBanner: React.FC = () => {
           {/* Botón de cerrar en la imagen para pantallas pequeñas */}
           <button
             onClick={handleClose}
-            className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-5xl lg:hidden" // Ocultar en pantallas grandes
+            className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-5xl lg:hidden bg-white rounded-full h-12 w-12" // Ocultar en pantallas grandes
           >
             &times; {/* Icono de cierre */}
           </button>
@@ -57,7 +57,7 @@ const WelcomeBanner: React.FC = () => {
             ¡Descubre nuestro servicio de nóminas y libérate de tareas administrativas!
           </p>
           <a
-            href="https://wa.me/tuNumeroDeWhatsApp" // Reemplaza con tu número de WhatsApp
+            href="https://wa.me/+51994037392" // Reemplaza con tu número de WhatsApp
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-blue-700 text-lg"
