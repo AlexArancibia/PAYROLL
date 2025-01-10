@@ -67,7 +67,7 @@ function Solutions() {
 
         {/* Segunda Sección con Imagen */}
         <div className='content-section flex flex-row flex-wrap items-center pt-16 lg:pt-20 pb-12'>
-          <div className='flex w-full lg:w-5/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
+          <div className='flex w-full lg:w-6/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
             <p className="text-[18px] md:text-[20px] font-bold leading-[24px] text-neutral-500">
               Recursos humanos diarios
             </p>
@@ -83,13 +83,13 @@ function Solutions() {
               </NavLink>
             </div>
             <p className="text-base leading-[28px] font-normal text-neutral-500 mb-0 mt-2 md:mb-4">
-              Implementamos actualizaciones automáticas para cumplir con cambios laborales 
+              Implementamos actualizaciones automáticas para cumplir con cambios laborales <br></br>
               y garantizamos seguridad en la nube respaldada por AWS.
             </p>
             
           </div>
           
-          <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0   '>
+          <div className='relative flex w-full lg:w-6/12 justify-end items-end p-0   '>
    
           {/* <video 
             className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[346px] z-[1] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
@@ -120,7 +120,7 @@ function Solutions() {
 
           
           <video 
-            className='rounded-xl  h-full w-[600px] lg:ml-8 ' 
+            className='rounded-xl  h-full w-[650px] lg:ml-8 ' 
       
             autoPlay 
             loop 
