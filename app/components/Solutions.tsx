@@ -21,8 +21,8 @@ function Solutions() {
       />
       
 
-      <div  className='container-section relative  pt-24 -mt-24'>
-        <div className='content-section flex flex-row flex-wrap items-center'>
+      <div  className='container-section relative  pt-24 -mt-24  '>
+        <div className='content-section flex flex-row flex-wrap items-center  pb-12 '>
 
           {/* Sección de texto y grid */}
           <div className='flex w-full lg:w-6/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
@@ -66,7 +66,7 @@ function Solutions() {
         
 
         {/* Segunda Sección con Imagen */}
-        <div className='content-section flex flex-row flex-wrap items-center pt-16 lg:pt-20'>
+        <div className='content-section flex flex-row flex-wrap items-center pt-16 lg:pt-20 pb-12'>
           <div className='flex w-full lg:w-5/12 flex-col gap-4 pb-8 lg:pb-0 justify-center'>
             <p className="text-[18px] md:text-[20px] font-bold leading-[24px] text-neutral-500">
               Recursos humanos diarios
@@ -89,7 +89,7 @@ function Solutions() {
             
           </div>
           
-          <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0 lg:p-12 min-h-[250px] lg:min-h-[600px]'>
+          <div className='relative flex w-full lg:w-7/12 justify-center items-end p-0   '>
    
           {/* <video 
             className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[346px] z-[1] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[120px]' 
@@ -118,18 +118,9 @@ function Solutions() {
             className='absolute hidden lg:block   z-0 top-[00px] lg:top-[70px] w-[347px] h-[220px] lg:w-[550px] lg:h-[400px] xl:w-[600px] xl:h-[440px]'
           /> */}
 
+          
           <video 
-            className='absolute hidden lg:block h-[175px] lg:h-[320px] xl:h-[446px] z-[1] rounded-sm lg:rounded-xl top-[25px] lg:top-[116px] xl:top-[70px]' 
-             
-            autoPlay 
-            loop 
-            muted
-          >
-            <source src={video} type="video/mp4" />
-            Tu navegador no soporta la reproducción de videos.
-          </video>
-          <video 
-            className='rounded-xl block lg:hidden h-full  ' 
+            className='rounded-xl  h-full w-[600px] lg:ml-8 ' 
       
             autoPlay 
             loop 
